@@ -1,25 +1,25 @@
-import { Custard, CustardModule, STEPS_ALL } from "@discolabs/custard-js";
+import { Custard, CustardModule, STEP_CONTACT_INFORMATION } from "@discolabs/custard-js";
 
-class LogToConsoleModule extends CustardModule {
+class AcceptTermsAndConditionsModule extends CustardModule {
 
   id() {
-    return 'log-to-console';
+    return 'accept-terms-and-conditions';
   }
 
   steps() {
-    return STEPS_ALL;
+    return STEP_CONTACT_INFORMATION;
   }
 
   selector() {
-    return 'body';
+    return '[data-buyer-accepts-marketing]';
   }
 
   setup() {
-    console.log('checkout.js loaded.');
+    this.$element.after(this.options.html_templates.accept_terms_and_conditions);
   }
 
 }
 
 window.custard = new Custard([
-  LogToConsoleModule
+  AcceptTermsAndConditionsModule
 ]);

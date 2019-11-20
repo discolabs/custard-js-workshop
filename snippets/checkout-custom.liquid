@@ -4,12 +4,32 @@
 
 {%- endcomment -%}
 
+{%- capture HTML_TEMPLATE_ACCEPT_TERMS_AND_CONDITIONS -%}
+<div class="fieldset-description" data-buyer-accepts-marketing="">
+  <div class="section__content">
+    <div class="checkbox-wrapper">
+      <div class="checkbox__input">
+        <input name="checkout[attributes][accepts_terms_and_conditions]" type="hidden" value="0" />
+        <input class="input-checkbox" type="checkbox" value="1" name="checkout[attributes][accepts_terms_and_conditions]" id="checkout_accepts_terms_and_conditions" />
+      </div>
+      <label class="checkbox__label" for="checkout_accepts_terms_and_conditions">
+        I accept the terms and conditions of purchase
+      </label>
+    </div>
+  </div>
+</div>
+{%- endcapture -%}
+
 {{ 'checkout.js' | asset_url | script_tag }}
 
 <script type="text/javascript">
   window.custard.init(
     jQuery || Checkout.jQuery,
     Shopify.Checkout.step || (Shopify.Checkout.OrderStatus ? 'order_status' : null),
-    {}
+    {
+      html_templates: {
+        accept_terms_and_conditions: {{ HTML_TEMPLATE_ACCEPT_TERMS_AND_CONDITIONS | json }}
+      }
+    }
   );
 </script>
