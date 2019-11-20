@@ -12,6 +12,7 @@
 
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
+    {{ 'checkout.js' | asset_url | script_tag }}
   </head>
   <body>
     {{ skip_to_content_link }}
