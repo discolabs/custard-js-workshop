@@ -12,7 +12,7 @@
 
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
-    {{ 'checkout.js' | asset_url | script_tag }}
+    {%- render 'checkout-custom' -%}
   </head>
   <body>
     {{ skip_to_content_link }}

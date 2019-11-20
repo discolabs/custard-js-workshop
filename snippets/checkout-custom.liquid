@@ -1,0 +1,15 @@
+{%- comment -%}
+
+  checkout-custom.liquid
+
+{%- endcomment -%}
+
+{{ 'checkout.js' | asset_url | script_tag }}
+
+<script type="text/javascript">
+  window.custard.init(
+    jQuery || Checkout.jQuery,
+    Shopify.Checkout.step || (Shopify.Checkout.OrderStatus ? 'order_status' : null),
+    {}
+  );
+</script>
