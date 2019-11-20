@@ -701,6 +701,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@discolabs/custard-js@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@discolabs/custard-js/-/custard-js-0.0.6.tgz#223f3bb53a995b46eba253d9a52c0c26ca3aeb6e"
+  integrity sha512-uqZ//RfyOjSq+3X1lUmV3TfIrwFEVnlWvHU1G2yRhueLxRf94wiw5fhpt280+8N7Q8qZjvgBk1+x9H6nmY46Wg==
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"

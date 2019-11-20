@@ -18,6 +18,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@babel/runtime": "^7.4.0",
+    "@discolabs/custard-js": "^0.0.6",
     "core-js": "3"
   },
   "devDependencies": {
