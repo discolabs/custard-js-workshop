@@ -1,0 +1,42 @@
+{
+  "name": "custard-js-workshop",
+  "version": "0.0.1",
+  "homepage": "https://github.com/discolabs/custard-js-workshop",
+  "description": "Custard.js Workshop theme.",
+  "keywords": "Shopify",
+  "author": "Gavin Ballard <gavin@discolabs.com>",
+  "main": "package.json",
+  "license": "None",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p --config webpack.checkout.config.js --mode production",
+    "lint": "eslint . -c .eslintrc --ext js,jsx"
+  },
+  "engines": {
+    "node": ">= 9.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime": "^7.4.0",
+    "core-js": "3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "json-server": "^0.14.0",
+    "prettier": "^1.16.4",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}

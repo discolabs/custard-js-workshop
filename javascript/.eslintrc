@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/first": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["error"]
+      }
+    ],
+    "no-return-assign": ["error", "except-parens"],
+    "react/destructuring-assignment": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-access-state-in-setstate": "off",
+    "react/no-danger": "off"
+  }
+}
